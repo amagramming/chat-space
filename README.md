@@ -2,10 +2,9 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
-|mail_address|integer|null: false, foreign_key: true|
-|password|integer|null: false, foreign_key: true|
+|name|integer|null: false|
+|mail_address|integer|null: false|
+|password|integer|null: false|
 
 ### Association
 - has_many :group, through: :groups_users
@@ -17,8 +16,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|tweet_id|integer|null: false, foreign_key: true|
+|name|integer|null: false|
+
 
 ### Association
 - has_many :users, through: :groups_users
@@ -43,7 +42,9 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false|
+|group_id|integer|null: false|
+|image|integer|
 |main|text|null: false|
 
 
