@@ -2,12 +2,12 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false|
+|name|string|null: false|
 |mail_address|integer|null: false|
 |password|integer|null: false|
 
 ### Association
-- has_many :group, through: :groups_users
+- has_many :groups, through: :groups_users
 - has_many :messages
 - has_many :groups_users
 
@@ -16,7 +16,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false|
+|string|integer|null: false|
 
 
 ### Association
@@ -44,8 +44,8 @@
 |------|----|-------|
 |user_id|integer|null: false|
 |group_id|integer|null: false|
-|image|integer|
-|main|text|null: false|
+|image|string|
+|main|text|
 
 
 ### Association
