@@ -16,7 +16,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|string|integer|null: false|
+|name|string|null: false|
 
 
 ### Association
