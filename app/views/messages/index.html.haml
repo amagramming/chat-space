@@ -1,0 +1,64 @@
+.Wrapper
+  .Sidebar
+    .User__name
+      .top-items
+        .top-items__name
+          peoc
+        .top-items__icons
+          = icon('far', 'edit',class: "icons__edit")
+          = icon('fas', 'cog')
+    .Group__list
+      .Group
+        .Group__name
+          techcamp
+        .Group__message
+          まだメッセージがありません
+      .Group
+        .Group__name
+          techcamp
+        .Group__message
+          まだメッセージがありません
+      .Group
+        .Group__name
+          techcamp
+        .Group__message
+          まだメッセージがありません
+  .Chat-main
+    .Group-info
+      .Chat__name
+        techcamp
+        .Chat__member
+          Member:peoc
+      .Chat__icons
+        = link_to "#",class: "icons__Edit" do
+          Edit
+    .Message__list
+      .Message-info
+        .Message__user
+          peoc
+        .Message__date
+          2020/7/8(wed) 16:00:00
+      .Message__text
+        おはようございます
+      .Message-info
+        .Message__user
+          peoc
+        .Message__date
+          2020/7/8(wed) 16:00:00
+      .Message__text
+        おはようございます
+      .Message-info
+        .Message__user
+          peoc
+        .Message__date
+          2020/7/8(wed) 16:00:00
+      .Message__text
+        おはようございます
+    .Message__form
+      .Message__textbox
+        %input{type: "text", class: "Message-text", placeholder: "type a message"}
+        %label{class: "Message-img"}
+          =icon('far','image')
+          %input{type: "file", class: "Message-img__file"}
+      .Message__btn
+        %input{type: "submit", value: "Send", class: "submit-btn"}
