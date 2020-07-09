@@ -1,13 +1,13 @@
 .Wrapper
   .Sidebar
-    .User__name
-      .top-items
-        .top-items__name
+    .User-name
+      .Top-items
+        .Top-items__name
           peoc
-        .top-items__icons
+        .Top-items__icons
           = icon('far', 'edit',class: "icons__edit")
           = icon('fas', 'cog')
-    .Group__list
+    .Group-list
       .Group
         .Group__name
           techcamp
@@ -25,40 +25,39 @@
           まだメッセージがありません
   .Chat-main
     .Group-info
-      .Chat__name
+      .Group-info__name
         techcamp
-        .Chat__member
+        .Group-info__name__member
           Member:peoc
-      .Chat__icons
-        = link_to "#",class: "icons__Edit" do
+      .Group-info__icons
+        = link_to "#",class: "Group-info__icons__Edit" do
           Edit
-    .Message__list
+    .Message-list
       .Message-info
-        .Message__user
+        .Message-info__user
           peoc
-        .Message__date
+        .Message-info__date
           2020/7/8(wed) 16:00:00
-      .Message__text
+      .Message-text
         おはようございます
       .Message-info
-        .Message__user
+        .Message-info__user
           peoc
-        .Message__date
+        .Message-info__date
           2020/7/8(wed) 16:00:00
-      .Message__text
+      .Message-text
         おはようございます
       .Message-info
-        .Message__user
+        .Message-info__user
           peoc
-        .Message__date
+        .Message-info__date
           2020/7/8(wed) 16:00:00
-      .Message__text
+      .Message-text
         おはようございます
-    .Message__form
-      .Message__textbox
-        %input{type: "text", class: "Message-text", placeholder: "type a message"}
-        %label{class: "Message-img"}
+    .Message-form
+      .Form
+        %input{type: "text", class: "Form__text", placeholder: "type a message"}
+        %label{class: "Form__img"}
           =icon('far','image')
-          %input{type: "file", class: "Message-img__file"}
-      .Message__btn
-        %input{type: "submit", value: "Send", class: "submit-btn"}
+          %input{type: "file", class: "Form__img__file"}
+      %input{type: "submit", value: "Send", class: "submit-btn"}
