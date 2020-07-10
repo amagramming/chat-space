@@ -53,3 +53,4 @@
 - belongs_to :group
 
 
+
