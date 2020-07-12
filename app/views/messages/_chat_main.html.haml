@@ -1,38 +1,20 @@
-  .Chat-main
-    .Group-info
-      .Group-info__name
-        techcamp
-        .Group-info__name__member
-          Member:peoc
-      .Group-info__icons
-        = link_to "#",class: "Group-info__icons__Edit" do
-          Edit
-    .Message-list
-      .Message-info
-        .Message-info__user
-          peoc
-        .Message-info__date
-          2020/7/8(wed) 16:00:00
-      .Message-text
-        おはようございます
-      .Message-info
-        .Message-info__user
-          peoc
-        .Message-info__date
-          2020/7/8(wed) 16:00:00
-      .Message-text
-        おはようございます
-      .Message-info
-        .Message-info__user
-          peoc
-        .Message-info__date
-          2020/7/8(wed) 16:00:00
-      .Message-text
-        おはようございます
-    .Message-form
-      .Form
-        %input{type: "text", class: "Form__text", placeholder: "type a message"}
-        %label{class: "Form__img"}
-          =icon('far','image')
-          %input{type: "file", class: "Form__img__file"}
-      %input{type: "submit", value: "Send", class: "submit-btn"}
+.Chat-main
+  .Group-info
+    .Group-info__name
+      = @group.name 
+      .Group-info__name__member
+        - @group.users.each do |user|
+          =user.name
+    .Group-info__icons
+      = link_to edit_group_path(@group),class: "Group-info__icons__Edit" do
+        Edit
+  .Message-list
+    = render @messages
+    
+  .Message-form
+    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
+      = f.text_field :content, class: 'Form__text', placeholder: 'type a message'
+      = f.label :image, class: 'Form__img' do
+        = icon('far', 'image', class: 'Form__icon')
+        = f.file_field :image, class: 'Form__img__file'
+      = f.submit 'Send', class: 'submit-btn'

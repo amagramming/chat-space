@@ -131,6 +131,7 @@
       
       .Form{
         width: 100%;
+        display: flex;
         position: relative;
         &__text{
           height: 50px;
@@ -138,15 +139,15 @@
           border: none;
           padding: 0px 45px 0px 15px;
         }
-          &__img{
-            line-height: 50px;
-            font-size: 25px;
-            position: absolute;
-            right: 10px;
-              &__file{
-                display: none;
-              }
-          }
+        &__img{
+          line-height: 50px;
+          font-size: 25px;
+          position: absolute;
+          right: 125px;
+            &__file{
+              display: none;
+            }
+        }
       }
         
     .submit-btn{
