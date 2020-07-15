@@ -5,9 +5,9 @@
         = current_user.name
       .Top-items__icons
         = link_to new_group_path do
-          = icon('far', 'edit',class: "icons__edit")
+          = icon('far', 'edit',class: "Top-items__icons--box")
         = link_to edit_user_path(current_user) do
-          = icon('fas', 'cog')
+          = icon('fas', 'cog',class: "Top-items__icons--box")
   .Group-list
     - current_user.groups.each do |group|
       .Group
